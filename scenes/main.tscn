@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2wn7u0npuei6"]
+[gd_scene load_steps=6 format=3 uid="uid://b2wn7u0npuei6"]
 
 [ext_resource type="Script" path="res://scripts/test_mesh.gd" id="1_llf7o"]
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="2_js13n"]
@@ -6,6 +6,8 @@
 [sub_resource type="PrismMesh" id="PrismMesh_dj4dg"]
 
 [sub_resource type="Skin" id="Skin_mifek"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5lswa"]
 
 [node name="Main" type="Node3D"]
 
@@ -20,3 +22,14 @@ transform = Transform3D(1, 0, 0, 0, 0.84295, 0.537991, 0, -0.537991, 0.84295, 0.
 
 [node name="Nature" parent="." instance=ExtResource("2_js13n")]
 transform = Transform3D(1, 0, 0, 0, 1.3919, 0, 0, 0, 1, -0.0570673, -0.734956, -0.0321455)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.038
+
+[node name="SkeletonIK3D" type="SkeletonIK3D" parent="Timer"]
+process_priority = 1
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20085, -0.811024, -0.15116)
+mesh = SubResource("CapsuleMesh_5lswa")
+script = ExtResource("1_llf7o")
