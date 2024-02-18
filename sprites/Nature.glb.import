@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blae6l6va5rp2"
-path="res://.godot/imported/Nature.glb-c447a4652eabc04d66bb8b66de07f0cd.scn"
+path="res://.godot/imported/Nature.glb-114e1840fe1064aaf1061b2c0f9097c6.scn"
 
 [deps]
 
-source_file="res://godot-git-plugin-v3.1.0/addons/Nature.glb"
-dest_files=["res://.godot/imported/Nature.glb-c447a4652eabc04d66bb8b66de07f0cd.scn"]
+source_file="res://sprites/Nature.glb"
+dest_files=["res://.godot/imported/Nature.glb-114e1840fe1064aaf1061b2c0f9097c6.scn"]
 
 [params]
 
