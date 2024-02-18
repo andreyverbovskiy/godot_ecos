@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2wn7u0npuei6"]
+[gd_scene load_steps=6 format=3 uid="uid://b2wn7u0npuei6"]
 
 [ext_resource type="Script" path="res://scripts/test_mesh.gd" id="1_llf7o"]
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="2_js13n"]
+[ext_resource type="Script" path="res://scenes/Camera_movement.gd" id="2_u8qra"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_dj4dg"]
 
@@ -17,6 +18,16 @@ script = ExtResource("1_llf7o")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.84295, 0.537991, 0, -0.537991, 0.84295, 0.437035, 0.631487, 1.97748)
+script = ExtResource("2_u8qra")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.319371, 0.500407)
+light_color = Color(0.992157, 0.996078, 0.992157, 1)
+light_energy = 0.35
+sky_mode = 1
 
 [node name="Nature" parent="." instance=ExtResource("2_js13n")]
 transform = Transform3D(1, 0, 0, 0, 1.3919, 0, 0, 0, 1, -0.0570673, -0.734956, -0.0321455)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 1, 2, 0)
