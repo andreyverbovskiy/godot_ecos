@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b2wn7u0npuei6"]
 
-[ext_resource type="Script" path="res://scenes/resource_generation.gd" id="1_0hj5x"]
-[ext_resource type="Script" path="res://scenes/moving_mesh3d.gd" id="1_7w3br"]
+[ext_resource type="Script" path="res://scripts/resource_generation.gd" id="1_0hj5x"]
+[ext_resource type="Script" path="res://scripts/moving_mesh3d.gd" id="1_7w3br"]
 [ext_resource type="Script" path="res://scripts/test_mesh.gd" id="1_llf7o"]
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="2_js13n"]
 [ext_resource type="Script" path="res://scripts/mesh3_spinscript.gd" id="3_3xooc"]
