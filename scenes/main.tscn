@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://btvage37ef7ly"]
+[gd_scene load_steps=2 format=3 uid="uid://btvage37ef7ly"]
+
+[ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="1_jsis2"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Nature" parent="." instance=ExtResource("1_jsis2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
