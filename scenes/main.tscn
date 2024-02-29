@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://b2wn7u0npuei6"]
 
+=======
+[gd_scene load_steps=14 format=3 uid="uid://b2wn7u0npuei6"]
+
+[ext_resource type="Script" path="res://scripts/resource_generation.gd" id="1_0hj5x"]
+[ext_resource type="Script" path="res://scripts/moving_mesh3d.gd" id="1_7w3br"]
+[ext_resource type="Script" path="res://scripts/test_mesh.gd" id="1_llf7o"]
+>>>>>>> 91c9080370d226b8644e02c65cbf7b1d9ad833a3
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="2_js13n"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_0hj5x")
 
+<<<<<<< HEAD
+=======
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.418051, 0, 0, 0, 0.349656, 0, 0, 0, 0.355212, 1.0653, -0.632883, -0.915635)
+mesh = SubResource("PrismMesh_dj4dg")
+skin = SubResource("Skin_mifek")
+script = ExtResource("1_7w3br")
+
+>>>>>>> 91c9080370d226b8644e02c65cbf7b1d9ad833a3
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.84295, 0.537991, 0, -0.537991, 0.84295, 0.437035, 0.631487, 1.97748)
 
