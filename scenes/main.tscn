@@ -1,40 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2wn7u0npuei6"]
+[gd_scene load_steps=2 format=3 uid="uid://b2wn7u0npuei6"]
 
-[ext_resource type="Script" path="res://scripts/test_mesh.gd" id="1_llf7o"]
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="2_js13n"]
-[ext_resource type="Script" path="res://scripts/mesh3_spinscript.gd" id="3_3xooc"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_dj4dg"]
-
-[sub_resource type="Skin" id="Skin_mifek"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_5lswa"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_mtbh4"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_s5hq7"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_nyr0j"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0qmym"]
-inherit_velocity_ratio = 0.5
-direction = Vector3(0, 1, 0)
-spread = 0.0
-initial_velocity_min = 10.0
-initial_velocity_max = 10.0
-gravity = Vector3(0, -3, 0)
-
-[sub_resource type="SphereMesh" id="SphereMesh_va5cr"]
-radius = 0.01
-height = 0.01
 
 [node name="Main" type="Node3D"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.418051, 0, 0, 0, 0.349656, 0, 0, 0, 0.355212, 1.0653, -0.632883, -0.915635)
-mesh = SubResource("PrismMesh_dj4dg")
-skin = SubResource("Skin_mifek")
-script = ExtResource("1_llf7o")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.84295, 0.537991, 0, -0.537991, 0.84295, 0.437035, 0.631487, 1.97748)
@@ -48,38 +16,5 @@ wait_time = 0.038
 [node name="SkeletonIK3D" type="SkeletonIK3D" parent="Timer"]
 process_priority = 1
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20085, -0.811024, -0.15116)
-mesh = SubResource("CapsuleMesh_5lswa")
-script = ExtResource("1_llf7o")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.813381, 0.505491, -0.287905, 0.0446169, 0.439246, 0.897258, 0.580017, -0.742659, 0.334721, -1.51675, 1.90947, -0.306745)
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.228685, -0.71873, -0.149255)
-mesh = SubResource("BoxMesh_mtbh4")
-script = ExtResource("3_3xooc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(1, 0, 0, 0, 4.88336, -0.214735, 0, 1.07368, 0.976672, 0, 4.46841, 0.869302)
-mesh = SubResource("CapsuleMesh_s5hq7")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618526, 0.839476, -0.00186884)
-mesh = SubResource("SphereMesh_nyr0j")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.845626, 0.822529, -0.00373781)
-mesh = SubResource("SphereMesh_nyr0j")
-skeleton = NodePath("../MeshInstance3D2")
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="MeshInstance3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.28565, 2.04563)
-amount = 50
-sub_emitter = NodePath(".")
-trail_lifetime = 1.0
-process_material = SubResource("ParticleProcessMaterial_0qmym")
-draw_passes = 2
-draw_pass_1 = SubResource("SphereMesh_va5cr")
-draw_pass_2 = null
