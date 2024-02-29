@@ -1,42 +1,25 @@
-#create class Creature
-#attributes
-##Attack
-##Energy
-##
-
-#Functions:
-#Shitting :) :)
-
-#Dying
-
-#Eating
-
-#Creating (Birthing) creature
-
-#Moving
-
-#Sleeping
+extends Node3D
 
 class_name Creature
 
-# Attributes
-
-var energy = 100
-var food = 100
-var water = 100
-var attack = 0
-var age = 0
-
-# Initialize with random attribute values
-func _init():
-    # Only randomizing age for now, others start at maxed values 
-    age = randi_range(1,100)
-
-    pass
+@export var stats: Resource
 
 func _ready():
-    pass
+    if stats:
+        print(stats)
 
-func _process():
-    pass
 
+
+
+
+
+
+
+
+#Functions:
+#Shitting :) :)
+#Dying
+#Eating
+#Creating (Birthing) creature
+#Moving
+#Sleeping
