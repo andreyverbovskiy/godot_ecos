@@ -1,3 +1,5 @@
+class_name CreatureResource
+
 extends Resource
 
 @export var energy: int
