@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dopklwmxdkupq"]
+
+[ext_resource type="Script" path="res://scripts/Creature/creature.gd" id="1_pl42c"]
+[ext_resource type="Resource" uid="uid://2ibf7g3f7irm" path="res://resources/CreatureResource.tres" id="2_egued"]
+
+[node name="Creature" type="Node3D"]
+script = ExtResource("1_pl42c")
+stats = ExtResource("2_egued")

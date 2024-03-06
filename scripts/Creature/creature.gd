@@ -18,7 +18,10 @@ func _init():
     water = stats.water
     age = stats.age
     attack = stats.attack
-    
+
+
+func _enter_tree():
+    print("Creature entered")
 
 func _ready():
     
@@ -31,7 +34,6 @@ func _process(_delta):
         print("Eating!")
         eat()
     print(food)
-    notify_property_list_changed()
 
 
 func eat():
