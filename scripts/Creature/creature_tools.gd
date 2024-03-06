@@ -3,7 +3,9 @@ extends Node3D
 
 @export_category("Debug")
 
-@export var creature: PackedScene = preload("res://scenes/creature_testing/creature.tscn")
+const constants = preload("res://scripts/constants.gd")
+
+@export var creature: PackedScene = preload(constants.CREATURE_SCENE)
 @export var spawnNewCreature: bool:
     set(value):
         _spawn_new_creature()
