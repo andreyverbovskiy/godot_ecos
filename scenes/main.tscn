@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://btvage37ef7ly"]
 
 [ext_resource type="PackedScene" uid="uid://blae6l6va5rp2" path="res://sprites/Nature.glb" id="1_jsis2"]
-[ext_resource type="Script" path="res://sprites/res_gen.gd" id="2_ouw1w"]
+[ext_resource type="Script" path="res://scripts/res_gen.gd" id="2_ouw1w"]
 
 [node name="Node3D" type="Node3D"]
 
