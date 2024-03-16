@@ -28,4 +28,12 @@ stats = SubResource("Resource_bnfo1")
 script = ExtResource("3_cfd1i")
 stats = SubResource("Resource_bnfo1")
 
+[node name="Creature3" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
+script = ExtResource("3_cfd1i")
+stats = SubResource("Resource_bnfo1")
+
+[node name="Creature4" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
+script = ExtResource("3_cfd1i")
+stats = SubResource("Resource_bnfo1")
+
 [node name="Creature" parent="." instance=ExtResource("2_fntlj")]
