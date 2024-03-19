@@ -6,8 +6,7 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="Nature" parent="." instance=ExtResource("1_jsis2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("2_ouw1w")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 5)
+transform = Transform3D(1, 0, 0, 0, 0.0154453, 0.999881, 0, -0.999881, 0.0154453, 0, 6.00009, -0.326557)
