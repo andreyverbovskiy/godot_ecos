@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://2ibf7g3f7irm"]
+
+[ext_resource type="Script" path="res://scripts/Creature/CreatureResource.gd" id="1_bm0a7"]
+
+[resource]
+script = ExtResource("1_bm0a7")
+energy = 0
+food = 0
+water = 0
+age = 0
+attack = 0
