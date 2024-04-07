@@ -1,39 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp027xlp43t83"]
+[gd_scene load_steps=3 format=3 uid="uid://cp027xlp43t83"]
 
 [ext_resource type="Script" path="res://scripts/Creature/creature_tools.gd" id="1_aoyfi"]
 [ext_resource type="PackedScene" uid="uid://bt6wpjhauksmo" path="res://scenes/creature_testing/creature.tscn" id="2_fntlj"]
-[ext_resource type="Script" path="res://scripts/Creature/creature.gd" id="3_cfd1i"]
-[ext_resource type="Script" path="res://scripts/Creature/creature_resource.gd" id="4_t7agj"]
-
-[sub_resource type="Resource" id="Resource_bnfo1"]
-script = ExtResource("4_t7agj")
-energy = 0
-food = 0
-water = 0
-age = 0
-attack = 0
 
 [node name="CreatureTests" type="Node3D"]
 
 [node name="CreatureSpawner" type="Node3D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_aoyfi")
-creature = ExtResource("2_fntlj")
 
-[node name="Creature" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
-script = ExtResource("3_cfd1i")
-stats = SubResource("Resource_bnfo1")
+[node name="Creature" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
 
-[node name="Creature2" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
-script = ExtResource("3_cfd1i")
-stats = SubResource("Resource_bnfo1")
+[node name="Creature2" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
 
-[node name="Creature3" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
-script = ExtResource("3_cfd1i")
-stats = SubResource("Resource_bnfo1")
+[node name="Creature3" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
 
-[node name="Creature4" type="Node3D" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
-script = ExtResource("3_cfd1i")
-stats = SubResource("Resource_bnfo1")
+[node name="Creature4" parent="CreatureSpawner" instance=ExtResource("2_fntlj")]
 
 [node name="Creature" parent="." instance=ExtResource("2_fntlj")]

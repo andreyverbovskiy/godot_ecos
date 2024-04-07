@@ -9,6 +9,7 @@ const Creature = preload("res://scripts/Creature/creature.gd") #is this syntax e
 
 
 #Chance to change stats of new offspring
+#By default stats of creature will be average of parents' stats
 #+-0.1 change with a high chance, larger changes with smaller chance
 #If no changes made, 
 func _evolution(Creature):
